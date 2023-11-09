@@ -104,7 +104,7 @@
     <profile>
       <id>spark-3.2</id>
       <activation>
-        <activeByDefault>true</activeByDefault>
+        <activeByDefault>false</activeByDefault>
       </activation>
       <properties>
         <sparkbundle.version>3.2</sparkbundle.version>
@@ -117,6 +117,9 @@
     </profile>
     <profile>
       <id>spark-3.3</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
       <properties>
         <sparkbundle.version>3.3</sparkbundle.version>
         <spark.shim.module>spark33</spark.shim.module>

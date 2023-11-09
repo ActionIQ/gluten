@@ -24,7 +24,7 @@ trait SparkShimProvider extends Logging {
   def createShim: SparkShims
 
   protected def extractMajorAndMinorVersion(version: String): String = {
-    val Array(major, minor, _) = version.split('.')
+    val Array(major, minor, _, _) = version.split('-')
     s"$major.$minor"
   }
 }
