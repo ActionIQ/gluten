@@ -124,7 +124,7 @@
         <sparkbundle.version>3.3</sparkbundle.version>
         <spark.shim.module>spark33</spark.shim.module>
         <spark.test.module>spark33</spark.test.module>
-        <spark.version>3.3.1</spark.version>
+        <spark.version>3-3-2-aiq999</spark.version>
         <delta.version>2.2.0</delta.version>
         <delta.binary.version>22</delta.binary.version>
       </properties>
@@ -781,4 +781,39 @@
       </plugin>
     </plugins>
   </build>
+  <repositories>
+    <repository>
+      <id>central</id>
+      <name>Maven Repository</name>
+      <url>https://repo.maven.apache.org/maven2</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+    <repository>
+      <id>aiq-releases-artifactory</id>
+      <name>Artifactory Releases</name>
+      <url>https://actioniq.jfrog.io/artifactory/aiq-sbt</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+    <repository>
+      <id>aiq-releases-s3</id>
+      <name>AWS Releases Repository</name>
+      <url>s3://aiq-artifacts/releases</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
 </project>
