@@ -124,7 +124,7 @@
         <sparkbundle.version>3.3</sparkbundle.version>
         <spark.shim.module>spark33</spark.shim.module>
         <spark.test.module>spark33</spark.test.module>
-        <spark.version>3-3-2-aiq999</spark.version>
+        <spark.version>3-3-2-aiq997</spark.version>
         <delta.version>2.2.0</delta.version>
         <delta.binary.version>22</delta.binary.version>
       </properties>
@@ -508,7 +508,13 @@
         <artifactId>os-maven-plugin</artifactId>
         <version>${os-maven-plugin.version}</version>
       </extension>
+      <extension>
+        <groupId>com.github.seahen</groupId>
+        <artifactId>maven-s3-wagon</artifactId>
+        <version>1.3.3</version>
+      </extension>
     </extensions>
+
     <pluginManagement>
       <plugins>
         <plugin>
@@ -807,7 +813,7 @@
     <repository>
       <id>aiq-releases-s3</id>
       <name>AWS Releases Repository</name>
-      <url>s3://aiq-artifacts/releases</url>
+      <url>s3://aiq-artifacts/dz</url>
       <releases>
         <enabled>true</enabled>
       </releases>

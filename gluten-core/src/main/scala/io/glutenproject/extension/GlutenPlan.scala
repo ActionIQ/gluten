@@ -73,6 +73,11 @@ trait GlutenPlan extends SparkPlan with LogLevelUtil {
         // FIXME: Use a validation-specific method to catch validation failures
         TestStats.addFallBackClassName(this.getClass.toString)
         logValidationMessage(s"Validation failed with exception for plan: $nodeName, due to:", e)
+        logWarning("DZDEBUG", e)
+        logWarning(s"DZDEBUG ${e.getMessage}")
+        logWarning(s"DZDEBUG ${e.getStackTrace.mkString(",")}")
+        logWarning(s"DZDEBUG ${e.getLocalizedMessage}")
+        logWarning(s"DZDEBUG ${e.getCause}")
         ValidationResult.notOk(e.getMessage)
     } finally {
       TransformerState.finishValidation

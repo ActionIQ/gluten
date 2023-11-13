@@ -255,6 +255,9 @@
                     <ignoreClass>org.apache.spark.sql.execution.datasources.WriterBucketSpec$</ignoreClass>
                     <ignoreClass>org.apache.spark.sql.execution.datasources.InsertIntoHadoopFsRelationCommand</ignoreClass>
                     <ignoreClass>org.apache.spark.sql.execution.datasources.InsertIntoHadoopFsRelationCommand$</ignoreClass>
+                    <ignoreClass>com.google.thirdparty.publicsuffix.PublicSuffixPatterns</ignoreClass>
+                    <ignoreClass>com.google.thirdparty.publicsuffix.PublicSuffixType</ignoreClass>
+                    <ignoreClass>com.google.thirdparty.publicsuffix.TrieParser</ignoreClass>
 
                   </ignoreClasses>
                   <scopes>
