@@ -89,7 +89,7 @@ class ColumnarShuffleManager(conf: SparkConf) extends ShuffleManager with Loggin
           mapId,
           metrics)
       case unsafeShuffleHandle: SerializedShuffleHandle[K @unchecked, V @unchecked] =>
-        new UnsafeShuffleWriter(
+        new AiqUnsafeShuffleWriter(
           env.blockManager,
           context.taskMemoryManager(),
           unsafeShuffleHandle,
@@ -99,7 +99,7 @@ class ColumnarShuffleManager(conf: SparkConf) extends ShuffleManager with Loggin
           metrics,
           shuffleExecutorComponents)
       case bypassMergeSortHandle: BypassMergeSortShuffleHandle[K @unchecked, V @unchecked] =>
-        new BypassMergeSortShuffleWriter(
+        new AiqBypassMergeSortShuffleWriter(
           env.blockManager,
           bypassMergeSortHandle,
           mapId,
